@@ -1,0 +1,11 @@
+//one pod with one conatiner running with one web server then to check whether running or not
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rani
+spec:
+  containers:
+    - name: webapp
+      image: nginx
+      ports:
+      - containerPort: 80
