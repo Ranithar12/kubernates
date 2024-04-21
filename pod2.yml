@@ -1,0 +1,15 @@
+
+//using labels
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: flipkart
+  labels:
+    team: rani
+    department: devops
+spec:
+  containers:
+    - name: signup
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo signup; sleep 2; done"]
