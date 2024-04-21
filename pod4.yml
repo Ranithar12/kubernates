@@ -1,0 +1,26 @@
+
+//one pod with 2 conatiner
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rani
+spec:
+  containers:
+    - name: webapp
+      image: nginx
+      ports:
+      - containerPort: 80
+root@ranitha:~# ^C
+root@ranitha:~# cat pod3.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: amazon
+spec:
+  containers:
+    - name: signup
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo signup; sleep 2; done"]
+    - name: login
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo login; sleep 2; done"]
