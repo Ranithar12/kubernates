@@ -1,0 +1,21 @@
+//ReplicationController object
+
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: flipkart
+spec:
+  replicas: 2
+  selector:
+    app: nginx
+  template:
+    metadata:
+      name: sak
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: signup
+        image: nginx
+        ports:
+        - containerPort: 80
