@@ -1,0 +1,22 @@
+//Deployment Object
+
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: flipkart
+spec:
+  replicas: 2
+  selector:
+   matchLabels:
+    name: deployment
+  template:
+    metadata:
+      name: RaniLogin
+      labels:
+        name: deployment
+    spec:
+     containers:
+       - name: login
+         image: ubuntu
+         command: ["/bin/bash", "-c", "while true; do echo ranilogin; sleep 2; done"]
+
