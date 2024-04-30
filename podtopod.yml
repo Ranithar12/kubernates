@@ -1,0 +1,24 @@
+
+//pod to pod communication
+root@ranitha:~# cat pod.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rani
+spec:
+  containers:
+    - name: webapp
+      image: nginx
+      ports:
+      - containerPort: 80
+root@ranitha:~# cat pod2.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: httpd
+spec:
+  containers:
+    - name: httpd
+      image: httpd
+      ports:
+      - containerPort: 80
