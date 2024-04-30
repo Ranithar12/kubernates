@@ -1,0 +1,15 @@
+//container to container 
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: devops
+spec:
+  containers:
+    - name: signup
+      image: amazonlinux
+      command: ["/bin/bash", "-c", "while true; do echo signup; sleep 3; done"]
+    - name: login
+      image: nginx
+      ports:
+        - containerPort: 80
